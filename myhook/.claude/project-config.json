@@ -1,0 +1,49 @@
+{
+  "project": {
+    "name": "java-ai-guardrail-template",
+    "rootPackage": "com.example.demo",
+    "jdkVersion": "8",
+    "framework": "Spring Boot",
+    "frameworkVersion": "3.2.x",
+    "persistenceFramework": "MyBatis-Plus 3.5.x",
+    "architecture": "layered"
+  },
+  "hooks": {
+    "maxRepairRounds": 3,
+    "stateDir": ".claude/state"
+  },
+  "tooling": {
+    "enableFormatter": true,
+    "enableP3C": true,
+    "enableCheckstyle": true
+  },
+  "precheck": {
+    "denySystemOut": true,
+    "denyExecutorsFactory": true,
+    "denyHardcodedSecrets": true,
+    "denySqlStringConcat": true
+  },
+  "rules": {
+    "HR-001": {
+      "enabled": false,
+      "action": "deny"
+    },
+    "HR-002": {
+      "enabled": true,
+      "action": "deny"
+    },
+    "HR-003": {
+      "enabled": true,
+      "action": "deny"
+    },
+    "HR-004": {
+      "enabled": true,
+      "action": "deny"
+    }
+  },
+  "download": {
+    "p3cUrl": "https://repo1.maven.org/maven2/com/alibaba/p3c/p3c-pmd/2.1.1/p3c-pmd-2.1.1-jar-with-dependencies.jar",
+    "checkstyleUrl": "https://github.com/checkstyle/checkstyle/releases/download/checkstyle-8.45.1/checkstyle-8.45.1-all.jar",
+    "googleJavaFormatUrl": "https://repo1.maven.org/maven2/com/google/googlejavaformat/google-java-format/1.7/google-java-format-1.7-all-deps.jar"
+  }
+}

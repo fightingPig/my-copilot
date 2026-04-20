@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<ruleset
+    name="AI Java Mandatory Rules"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+    <description>用于 AI 自动修复闭环的 P3C 精简规则集。</description>
+
+    <rule
+        name="ThreadPoolCreationRule"
+        language="java"
+        class="com.alibaba.p3c.pmd.lang.java.rule.concurrent.ThreadPoolCreationRule">
+        <priority>1</priority>
+    </rule>
+
+    <rule
+        name="LockShouldWithTryFinallyRule"
+        language="java"
+        class="com.alibaba.p3c.pmd.lang.java.rule.concurrent.LockShouldWithTryFinallyRule">
+        <priority>1</priority>
+    </rule>
+
+    <rule
+        name="ThreadLocalShouldRemoveRule"
+        language="java"
+        class="com.alibaba.p3c.pmd.lang.java.rule.concurrent.ThreadLocalShouldRemoveRule">
+        <priority>2</priority>
+    </rule>
+
+    <rule
+        name="AvoidCallStaticSimpleDateFormatRule"
+        language="java"
+        class="com.alibaba.p3c.pmd.lang.java.rule.concurrent.AvoidCallStaticSimpleDateFormatRule">
+        <priority>2</priority>
+    </rule>
+
+    <rule
+        name="DontModifyInForeachCircleRule"
+        language="java"
+        class="com.alibaba.p3c.pmd.lang.java.rule.set.DontModifyInForeachCircleRule">
+        <priority>1</priority>
+    </rule>
+
+    <rule
+        name="WrapperTypeEqualityRule"
+        language="java"
+        class="com.alibaba.p3c.pmd.lang.java.rule.oop.WrapperTypeEqualityRule">
+        <priority>1</priority>
+    </rule>
+
+    <rule
+        name="EqualsAvoidNullRule"
+        language="java"
+        class="com.alibaba.p3c.pmd.lang.java.rule.oop.EqualsAvoidNullRule">
+        <priority>2</priority>
+    </rule>
+
+    <rule
+        name="BooleanPropertyShouldNotStartWithIsRule"
+        language="java"
+        class="com.alibaba.p3c.pmd.lang.java.rule.naming.BooleanPropertyShouldNotStartWithIsRule">
+        <priority>2</priority>
+    </rule>
+
+    <rule
+        name="AvoidReturnInFinallyRule"
+        language="java"
+        class="com.alibaba.p3c.pmd.lang.java.rule.exception.AvoidReturnInFinallyRule">
+        <priority>2</priority>
+    </rule>
+
+</ruleset>

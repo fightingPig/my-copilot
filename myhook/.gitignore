@@ -1,0 +1,14 @@
+# Claude Code
+.claude/settings.local.json
+.claude/*.jar
+.claude/logs/
+.claude/state/
+
+# IDE
+.idea/
+.vscode/
+
+# Build
+target/
+out/
+tmp/verify/
